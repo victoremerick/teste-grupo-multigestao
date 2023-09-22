@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: projeto-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: multigestao
+      POSTGRES_USER: seu-usuario
+      POSTGRES_PASSWORD: sua-senha
+    volumes:
+      - ./data:/var/lib/postgresql/data
